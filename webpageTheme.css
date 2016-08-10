@@ -1,0 +1,222 @@
+html, body{
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, Geneva, sans-serif;
+   }
+
+   .content a {
+      color: #777777;
+   }
+
+   a {
+      color: #ffffff;
+      text-decoration: none;
+   }
+
+   ul.list-inline {
+      margin: 45px 0 0 0;
+      padding-left: 50%;
+      font-size: 18px;
+   }
+
+   .left {
+      display: block;
+      margin: 0;
+      background-color: #2e6171;
+      width: 15%;
+      min-width: 200px;
+   }  
+
+   .sideBar {
+      background-color: #2e6171;
+      position: absolute;
+      width: calc(200px + 15px);
+      height: calc(100% - 70px);
+      z-index: -5;
+   } 
+
+   .img-rounded {
+      width: 200px;
+      height: 200px;
+      margin: 20px 30px 0px;
+      padding-bottom: 7px;
+      text-align: left
+   }
+
+   /*menu things*/
+      .menuTitle {
+         display: block;
+         font-weight: bold;
+         font-size: 25px;
+         color: #FFFFFF;
+         text-align: center;
+      }
+
+      ul.menu {
+         list-style-type: none;
+         margin: 172px 0 auto auto;
+         display: block;
+         position: fixed;
+         width: 150px;
+      }
+
+      span.link {
+         display: block;
+         font-weight: bold;
+         font-size: 13px;
+         color: #FFFFFF;
+         text-align: center;
+         padding: 6px 10px;
+      }
+      
+      .menu li:nth-child(odd) {
+         background-color: #76949f;
+      }
+
+      .menu li span.link:hover {
+         background-color: #6a6b83;
+         cursor: pointer;
+      }
+
+      .menu li:nth-child(even) {
+         background-color: #395e66;
+      }
+
+   .right {
+      overflow: hidden;
+      display: block;
+      float: right;
+      width: calc(100% - 215px);
+      min-width: 400px;
+      margin: 0;
+      padding: 0;
+   }
+
+   .body {
+      position: fixed;
+      height: calc(100% - 70px);
+      overflow: auto;
+   }
+
+   .content {
+      background-color: #bbbbbb;
+      margin: 18px 20px 0px 20px;
+      padding-bottom: 10px;
+   }
+
+   .full {
+      overflow: hidden;
+      display: block;
+      position: static;
+      float: right;
+      width: 100%;
+      min-width: 385px;
+      min-height: 70px;
+      background-color: #2e6171;
+      z-index: -20;
+   }
+
+   .corner {
+      overflow: hidden;
+      display: block;
+      position: static;
+      float: left;
+      width: calc(200px + 15px);
+      min-height: 70px;
+      height: inherit;
+      background-color: #556f7a;
+      margin-bottom: 0px;
+      z-index: 50;
+   }
+
+
+   .blocked {
+      display: block; 
+      width: 100%;
+      min-height: 70px;
+   }
+
+
+
+   .pageLinks {
+      color: #EEEEEE;
+      font-weight: bold;
+      font-size: 16px;
+      float: right;
+      padding: 15px;
+      display: inline-block;
+      vertical-align: middle;
+   }
+
+   .heading {
+      display: block;
+      color: #EEEEEE;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 4px 10px;
+      background-color: #6a6b83;
+   }
+
+   .subheading {
+      display: block;
+      color: #0E4544;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 20px 0px;
+   }
+
+   .paragraph, .gallery {
+      margin: 5px 30px 0px;
+      padding-bottom: 7px;
+      color: black;
+
+   }
+
+   .gallery {
+      overflow: hidden;
+   }
+
+   ul.square-bullet {
+      list-style-type: square;
+      margin: 0;
+   }
+
+   ul.square-bullet li {
+      color: #0E4544;
+   }
+
+   ul.square-bullet span.list-item {
+      color: #000000;
+   }
+
+   .captioned {
+      display: inline-block;
+      border: #AAAAAA solid 2px;
+      padding: 5px;
+      margin: 2px;
+      vertical-align: top;
+   }
+
+   .captioned span {
+      display: block;
+      color: #0E4544;
+      font-size: 14px;
+   }
+
+   img.thumb {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+   }
+
+   img.thumb-enlarged, img.inlined {
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+   }
+
+   .captioned img.thumb:hover, .captioned img.thumb-enlarged:hover {
+      cursor: pointer;
+   }

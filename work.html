@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <meta charset="UTF-8">
+   <meta name="description" content="Anna's Webpage of Awesome" />
+   <meta name="author" content="Anna Velasquez" />
+
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="webpageTheme.css">
+
+   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+   <script src="bootstrap/js/bootstrap.min.js"></script>
+   <script src="scripts/webpageScript.js"></script> 
+ 
+
+   <title>Webpage of Awesome - template</title>
+
+</head>
+
+
+<body style="background-color: #798086;"> 
+   
+   <!-- Upper block (main title, fixed) -->
+   <div class="blocked"> 
+      <div class="full">
+         <div class="corner"> </div>
+         <ul class="list-inline">
+            <li> <a href="main.html">Home</a> </li>
+            <li> <a href="projects.html">Projects</a> </li>
+            <li> <a href="work.html">Work</a> </li>
+            <li> <a href="extra.html">Extras</a> </li>
+         </ul>
+      </div>
+   </div>
+
+
+
+   <!-- Lower block (Menu and Content) -->
+   <div class="blocked">
+
+      <!-- menu (Left, fixed)-->
+      <div class="left">
+         <div class="sideBar"></div>
+         <ul class="menu">
+            <div class="menuTitle">Work</div>
+            <li><span class="link" onclick="scrollTo('one')">CPE Mentor</span></li>
+            <li><span class="link" onclick="scrollTo('two')">IME TA</span></li>
+            <li><span class="link" onclick="scrollTo('three')">State Bar Proctor</span></li>            
+            <li><span class="link" onclick="scrollTo('four')">Theater Tech</span></li>
+         </ul>
+      </div>
+
+      <!-- content (right, not fixed)-->
+      <div class="right">
+         <div class="body">
+
+            <div class="content" id="one">
+               <span class="heading">Under Construction</span>
+               <div class="paragraph">
+                  Have a peek at my demo of my visualizer with the song Iron by Woodkid (Mystery Jets Remix).  The audio and video are only a little bit off.  It runs smoother on my computer and the beat detection is more synched, but out of all the other screen recorders I've tried, this was the best. (Sorry for the bad audio)
+               </div>
+
+               <div class="gallery">
+                  <iframe width="420" height="315" src="https://www.youtube.com/embed/RenW2RVcX6I" frameborder="0" allowfullscreen></iframe>
+               </div>
+            </div>
+
+            <div class="content" id="skills">
+               <span class="heading">this is my template</span>
+
+               <span class="subheading">Software</span>
+               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
+               <div class="paragraph">
+                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
+               </div>
+               
+               <span class="subheading">Hardware</span>
+               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="right">
+               <div class="paragraph">
+                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
+               </div>
+
+               <span class="subheading">Others</span>
+               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
+               <div class="paragraph">
+                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
+               </div>                             
+            </div> <!-- skils --> 
+
+         </div>
+      </div>
+
+   </div>
+
+</body>
+</html>
+
