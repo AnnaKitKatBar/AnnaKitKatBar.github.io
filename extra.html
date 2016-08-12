@@ -24,9 +24,9 @@
    <!-- Upper block (main title, fixed) -->
    <div class="blocked"> 
       <div class="full">
-         <div class="corner"> </div>
+         <div class="corner" onclick="quoteChange()"> </div>
          <ul class="list-inline">
-            <li> <a href="main.html">Home</a> </li>
+            <li> <a href="index.html">Home</a> </li>
             <li> <a href="projects.html">Projects</a> </li>
             <li> <a href="work.html">Work</a> </li>
             <li> <a href="extra.html">Extras</a> </li>
@@ -41,14 +41,22 @@
 
       <!-- menu (Left, fixed)-->
       <div class="left">
-         <div class="sideBar"></div>
-         <ul class="menu">
-            <div class="menuTitle">Extras</div>
-            <li><span class="link" onclick="scrollTo('one')">Lion Dance</span></li>
-            <li><span class="link" onclick="scrollTo('two')">Music</span></li>
-            <li><span class="link" onclick="scrollTo('three')">Flowers</span></li>            
-            <li><span class="link" onclick="scrollTo('four')">Marvel</span></li>
-         </ul>
+         <div class="sideBar">
+            <ul class="menu">
+               <div class="menuTitle">Extras</div>
+               <li><span class="link" onclick="scrollTo('one')">Lion Dance</span></li>
+               <li><span class="link" onclick="scrollTo('two')">Music</span></li>
+               <li><span class="link" onclick="scrollTo('three')">Flowers</span></li>            
+               <li><span class="link" onclick="scrollTo('four')">Marvel</span></li>
+            </ul>
+
+            <div class="ranQuote">
+               <blockquote class="blockquote-reverse">
+                  <p>This is a quote, "click the top corner block for actual quotes"</p>
+                  <footer>by someone famous</footer>
+               </blockquote>
+            </div>
+         </div>
       </div>
 
       <!-- content (right, not fixed)-->
@@ -56,37 +64,34 @@
          <div class="body">
 
             <div class="content" id="one">
-               <span class="heading">Under Construction</span>
+               <span class="heading">Lion Dance</span>
                <div class="paragraph">
-                  Have a peek at my demo of my visualizer with the song Iron by Woodkid (Mystery Jets Remix).  The audio and video are only a little bit off.  It runs smoother on my computer and the beat detection is more synched, but out of all the other screen recorders I've tried, this was the best. (Sorry for the bad audio)
-               </div>
+                  Have a peek at my demo of my visualizer with the song Iron by Woodkid (Mystery Jets Remix) since this page is still under contruction (Sorry for the bad audio)
+               </div> <!-- lion dance -->
 
                <div class="gallery">
                   <iframe width="420" height="315" src="https://www.youtube.com/embed/RenW2RVcX6I" frameborder="0" allowfullscreen></iframe>
                </div>
             </div>
 
-            <div class="content" id="skills">
-               <span class="heading">this is my template</span>
+            <div class="content" id="two">
+               <span class="heading">Music</span>
+               <span class="subheading">subheading</span>
+               <div class="paragraph">contenttttt</div>               
+            </div> <!-- music -->
 
-               <span class="subheading">Software</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>
-               
-               <span class="subheading">Hardware</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="right">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>
+            <div class="content" id="three">
+               <span class="heading">Flowers</span>
+               <span class="subheading">subheading</span>
+               <div class="paragraph">contenttttt</div>               
+            </div> <!-- flowers -->
 
-               <span class="subheading">Others</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>                             
-            </div> <!-- skils -->  
+            <div class="content" id="four">
+               <span class="heading">Marvel</span>
+               <span class="subheading">subheading</span>
+               <div class="paragraph">contenttttt</div>               
+            </div> <!-- marvel -->
+
 
          </div>
       </div>

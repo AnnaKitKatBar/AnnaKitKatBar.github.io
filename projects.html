@@ -24,13 +24,13 @@
    <!-- Upper block (main title, fixed) -->
    <div class="blocked"> 
       <div class="full">
-         <div class="corner"> </div>
+         <div class="corner" onclick="quoteChange()"> </div>
          <ul class="list-inline">
-            <li> <a href="main.html">Home</a> </li>
+            <li> <a href="index.html">Home</a> </li>
             <li> <a href="projects.html">Projects</a> </li>
             <li> <a href="work.html">Work</a> </li>
             <li> <a href="extra.html">Extras</a> </li>
-         </ul>
+         </ul>         
       </div>
    </div>
 
@@ -41,14 +41,24 @@
 
       <!-- menu (Left, fixed)-->
       <div class="left">
-         <div class="sideBar"></div>
-         <ul class="menu">
-            <div class="menuTitle">Projects</div>
-            <li><span class="link" onclick="scrollTo('one')">This Website!</span></li>
-            <li><span class="link" onclick="scrollTo('two')">Audio Visualizer</span></li>
-            <li><span class="link" onclick="scrollTo('three')">Senior Project</span></li>            
-            <li><span class="link" onclick="scrollTo('four')">Classic Cipher De/Encoder</span></li>
-         </ul>
+         <div class="sideBar">
+            <ul class="menu">
+               <div class="menuTitle">Projects</div>
+               <li><span class="link" onclick="scrollTo('one')">This Website!</span></li>
+               <li><span class="link" onclick="scrollTo('two')">Audio Visualizer</span></li>
+               <li><span class="link" onclick="scrollTo('three')">Senior Project</span></li>
+               <li><span class="link" onclick="scrollTo('four')">Capstone Project</span></li>
+               <li><span class="link" onclick="scrollTo('five')">Classic Cipher De/Encoder</span></li>
+               <li><span class="link" onclick="scrollTo('six')">Technovation Challenge</span></li>
+            </ul>
+
+            <div class="ranQuote">
+               <blockquote class="blockquote-reverse">
+                  <p>This is a quote, "click the top corner block for actual quotes"</p>
+                  <footer>by someone famous</footer>
+               </blockquote>
+            </div>
+         </div>
       </div>
 
       <!-- content (right, not fixed)-->
@@ -56,38 +66,100 @@
          <div class="body">
 
             <div class="content" id="one">
-               <span class="heading">Under Construction</span>
+               <span class="heading">This Website!</span>
+               <span class="subheading">About</span>
                <div class="paragraph">
-                  Have a peek at my demo of my visualizer with the song Iron by Woodkid (Mystery Jets Remix).  The audio and video are only a little bit off.  It runs smoother on my computer and the beat detection is more synched, but out of all the other screen recorders I've tried, this was the best. (Sorry for the bad audio)
+                  This (semi)beautiful website in progress is my current project that I'm working on.  I haven't had much experience in HTML/CSS dev in school, so I decided to just dive straight into it and try to figure out how it works on the way.  I've always been interested in front-end work, but haven't been able to try much of it out when I was in school, so now that I don't have class projects to worry about much anymore, I decided to enhance my web dev skills with making and improving this website.
                </div>
 
-               <div class="gallery">
-                  <iframe width="420" height="315" src="https://www.youtube.com/embed/RenW2RVcX6I" frameborder="0" allowfullscreen></iframe>
+               <span class="subheading">Newest Update</span>
+               <div class="paragraph">
+                  The newest update that I've made to this website is the addition of my random quote generator in the left sidebar.  I used JavaScript to keep a static array of quotes which then randomizes which one is shown when you click the top corner block. 
                </div>
-            </div>
+               <div class="paragraph">
+                  Things I learned from implementing this:
+                  <ul>
+                     <li>How to make a function based on if a specific element is clicked</li>
+                     <li>How to make an element fade in and out</li>
+                     <li>How to pull and rewrite an HTML element using JavaScript</li>
+                  </ul>
+               </div>
 
-            <div class="content" id="skills">
-               <span class="heading">this is my template</span>
+               <span class="subheading">Things I Want to Do</span>
+               <div class="paragraph">
+                  There are still plenty of things I need to do and want to learn from building this website:
+                  <ul>
+                     <li>Finish the extras page about other things I like to do</li>
+                     <li>Implement drop down lists for the top navigation bar</li>
+                     <li>Change my random quotes to be taken from a database as opposed to an array in my JS script</li>
+                     <li>Make some sort of image slide show</li>
+                     <li>Learn how to pull and show data from other websites</li>
+                     <li>Make a proper footer</li>
+                     <li>Have a better layout design in general???</li>
+                     <li>Update design to use Bootstrap grid system</li>
+                  </ul>
+               </div>
+            </div> <!-- this website -->
 
+            <div class="content" id="two">
+               <span class="heading">Audio Visualizer</span>
                <span class="subheading">Software</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>
-               
+                  <div class="paragraph">
+                     In my last quarter of college, I was finally able to take a computer graphics class.  Needless to say, I fell in love with creating things that you could visually see on screen.  I've always held an interest in CGI and special effects in movies and TV shows, so I always saw this class as a first step into learning more about how to do things like that.  For my final project, I decided to make an audio visualizer because I've always loved music and thought it would be cool to incorporate that.  I also like the real-time responsiveness that an audio visualizer does and the idea that it enables people to see sound.
+                  </div>
+                  <div class="paragraph">
+                     To help with the audio analysis, I used the FMOD library.  With this frequency analysis, I was able to visualize the different frequencies and their intensities as well as visualize when a heavy bass or crashing snare beat sounded.  To see more in depth about what I did, <a href="http://users.csc.calpoly.edu/~zwood/teaching/csc471/finalW16_1/amvelasq/index.html">here</a> is a link to the project web page I made to turn in for my final project.
+                  </div>
+                  <div class="paragraph">
+                     Have a peek at my demo of my visualizer with the song Iron by Woodkid (Mystery Jets Remix).  The audio and video are only a little bit off.  It runs smoother on my computer and the beat detection is more synched, but out of all the other screen recorders I've tried, this was the best back then.  I'm looking into finding a better screen recorder for a better video. (Sorry for the bad audio)
+                  </div>
+
+                  <div class="gallery">
+                     <iframe width="420" height="315" src="https://www.youtube.com/embed/RenW2RVcX6I" frameborder="0" allowfullscreen></iframe>
+                  </div>
+
                <span class="subheading">Hardware</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="right">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>
+                  <div class="paragraph">
+                     I loved the idea of being able to see sound so much, that for another class, I also made an audio visualizer of sorts.  This time, completely in hardware.
+                  </div>
+                  <div class="paragraph">
+                     For my industrial manufacturing class, I made a transistor based audio spectrum analyzer.  I used a preexisting circuit schematic and designed the components and PCB circuit layout using DipTrace.  I then got the final PCB fabricated, populated the board, assembled and soldered the components by hand, and debugged the finished product. 
+                  </div>
+                  <div class="paragraph">
+                     In a nutshell, what this does is take in an audio input signal and various LEDs turn on and off depending on the frequencies detected at that time.  After the signal goes in, the first part of the circuit amplifies the signal, there are then three frequency filters that the signal goes through to represent the three frequency bands of low, mid, and high.  If a signal is able to pass through one of these filters, the AC signal gets rectified to a DC signal, which then turns on the LED driver which lights up the corresponding LEDs. <a href="https://docs.google.com/document/d/1bkmMEKCEz-s_kjjRbbY4kMx2-R9US1Y2gBtHONxc-M0/edit?usp=sharing">  Here</a> is a link to a short report for more details, schematics, and figures for how this hardware audio viusalizer works.
+                  </div>  
+                  <div class="paragraph">
+                     Coming soon - Video demo
+                  </div>             
+                  <!-- <div class="gallery">
+                     <iframe width="420" height="315" src="LINKTOINSERT" frameborder="0" allowfullscreen></iframe>
+                  </div> -->
+            </div> <!-- Audio Visualizer -->
 
-               <span class="subheading">Others</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>                             
-            </div> <!-- skils -->
 
+            <div class="content" id="three">
+               <span class="heading">Senior Project - Assay Analyzer</span>
+               <span class="subheading">Under Construction</span>
+               <div class="paragraph">contenttttt</div>               
+            </div> <!-- Senior Project -->
+
+            <div class="content" id="four">
+               <span class="heading">Capstone Project - Energy Harvester</span>
+               <span class="subheading">Under Construction</span>
+               <div class="paragraph">contenttttt</div>               
+            </div> <!-- Capstone -->
+
+            <div class="content" id="five">
+               <span class="heading">Classic Cipher De/Encoder</span>
+               <span class="subheading">Under Construction</span>
+               <div class="paragraph">contenttttt</div>               
+            </div> <!-- encoder/decoder -->            
+         
+            <div class="content" id="six">
+               <span class="heading">Technovation Challenge</span>
+               <span class="subheading">Under Construction</span>
+               <div class="paragraph">contenttttt</div>               
+            </div> <!-- technovation -->     
          </div>
       </div>
 

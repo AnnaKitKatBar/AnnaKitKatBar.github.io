@@ -12,7 +12,9 @@
    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
    <script src="bootstrap/js/bootstrap.min.js"></script>
    <script src="scripts/webpageScript.js"></script> 
-   <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+
+
+
 
    <title>Webpage of Awesome - Home</title>
 
@@ -24,7 +26,7 @@
    <!-- Upper block (main title, fixed) -->
    <div class="blocked"> 
       <div class="full">
-         <div class="corner"> </div>
+         <div class="corner" onclick="quoteChange()"> </div>
          <ul class="list-inline">
             <li> <a href="main.html">Home</a> </li>
             <li> <a href="projects.html">Projects</a> </li>
@@ -41,14 +43,22 @@
 
       <!-- menu (Left, fixed)-->
       <div class="left">
-         <div class="sideBar"></div>
-         <ul class="menu">
-            <div class="menuTitle">Home</div>
-            <li><span class="link" onclick="scrollTo('about')">About Me</span></li>
-            <li><span class="link" onclick="scrollTo('skills')">My Skills</span></li>
-            <li><span class="link" onclick="scrollTo('now')">What I'm Up To Now</span></li>            
-            <li><span class="link" onclick="scrollTo('later')">What I Hope For Later</span></li>
-         </ul>
+         <div class="sideBar">
+            <ul class="menu">
+               <div class="menuTitle">Home</div>
+               <li><span class="link" onclick="scrollTo('about')">About Me</span></li>
+               <li><span class="link" onclick="scrollTo('skills')">My Skills</span></li>
+               <li><span class="link" onclick="scrollTo('now')">What I'm Up To Now</span></li>            
+               <li><span class="link" onclick="scrollTo('later')">What I Hope For Later</span></li>
+            </ul>
+
+            <div class="ranQuote">
+               <blockquote class="blockquote-reverse">
+                  <p>This is a quote, "click the top corner block for actual quotes"</p>
+                  <footer>by someone famous</footer>
+               </blockquote>
+            </div>
+         </div>
       </div>
 
       <!-- content (right, not fixed)-->
@@ -57,60 +67,72 @@
 
             <div class="content" id="about">
                <span class="heading">About Me</span>
+               <img src="placeHolder.jpg" class="img-rounded" align="left" height="100%" width="100%">  
+               <span class="subheading">Hi there, you!</span>
+               <p>
+                  Welcome to my current project.  This webpage (in process) is a way for me to delve into and further my abilities in HTML, CSS, Javascript, and Bootstrap whilst also being a sort of interactive resume. (If you want a condensed version of the website, <a href="https://drive.google.com/open?id=0B1_zF8LFOOS_YWtfMFV4SWVITkE"> </a>here is a link to my regular resume)
+               </p>
 
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
-               <div class="paragraph">
-                  Hi there, you!  Welcome to my current project.  This webpage (in process) is a way for me to delve into and further my abilities in HTML, CSS, Javascript, and Bootstrap whilst also being a sort of interactive resume. (If you want a condensed version of the website, <a href="https://drive.google.com/open?id=0B1_zF8LFOOS_YWtfMFV4SWVITkE"> here is a link to my regular resume</a>)
-               </div>
-
-               <div class="paragraph">
+               <p>
                   My name is Anna Velasquez, and I'm a recent 2016 graduate of Cal Poly, San Luis Obispo.  I just graduated with a Bachelor's in Computer Engineering and am very excited to see what I can contribute to the world with my education.  I don't have a lot of professional experience yet, but I am very motivated and fast to learn new things. 
-               </div>               
+               </p>               
             </div> <!-- end about me -->
 
             <div class="content" id="skills">
                <span class="heading">My Skills</span>
 
                <span class="subheading">Software</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>
-               
+                  <dl class="dl-horizontal">
+                    <dt>Coding Languages</dt>
+                    <dd>Experienced in Java, C, C++</dd>
+                    <dd>Basic HTML, CSS, and JavaScript</dd>
+
+                    <dt>Database Languages</dt>
+                    <dd>SQL, MySQL</dd>
+
+                    <dt>Graphics</dt>
+                    <dd>OpenGL, glfw</dd>
+
+                    <dt>Operating Systems</dt>
+                    <dd>Unix, Linux, and Windows</dd>
+
+                    <dt>IDEs</dt>
+                    <dd>Sublime Text 2, Eclipse, and Microsoft Visual Studios</dd>
+
+                    <dt>Relevant Classes</dt>
+                    <dd>Design and Analysis of Algorithms</dd>
+                    <dd>Intro to Databases</dd>
+                    <dd>Intro to Computer Networks</dd>
+                    <dd>Systems Programming</dd>
+                    <dd>Intro to Computer Graphics</dd>
+
+                    <dt>In the works</dt>
+                    <dd>Currently learning Python and Ruby on Rails</dd>
+                    <dd>Continuing learning HTML, CSS, and Javascript</dd>
+                  </dl>
+
                <span class="subheading">Hardware</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="right">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>
+                  <dl class="dl-horizontal">
+                     <dt>Lab Tools</dt>
+                     <dd>Power supplies, oscilloscopes, multimeters, and wave generators</dd>
+
+                     <dt>PCB Fab & Mfg</dt>
+                     <dd>Ace in soldering, experience with using pick and place machine, PCB schematic design using DipTrace software, and debugging</dd>
+                  </dl>
 
                <span class="subheading">Others</span>
-               <img src="placeHolder.jpg" class="img-rounded" alt="comment" align="left">
-               <div class="paragraph">
-                  This project takes in an audio file (so far only tested with MP3s) and uses the FMOD audio library to do real time analysis of the frequencies of the audio.  It does this using FFT techniques to interpret the digital data as frequencies.  Ranges of these frequencies are then divided into separate channels based on your decided sample size and can be stored into a float array based on the intensity of that frequency range.  These channels were the data that I used to put on screen.  In order to get more precise data to visualize, I took the frequency spectrum from both left and the right channels and made a third spectrum array with the average intensity of both channels.  It is these values that I then use for my visualization.
-               </div>                             
+                  <dl class="dl-horizontal">
+                    <dt>Writing</dt>
+                    <dd>Great technical writing and communication skills, adept at presenting information</dd>
+
+                    <dt>Other Languages</dt>
+                    <dd>Intermediate in Italian and French</dd>
+                  </dl>
             </div> <!-- end skils -->
 
             <div class="content" id="now">
                <span class="heading">What I'm Up To Now</span>
-               <span class="subheading">Audio Bars (Iteration 1)</span>
-               <div class="paragraph">
-                  The first visual I made was a simple set of audio bars.  I have row of 64 bars representing 64 sets of frequency ranges from the averaged spectrum array. The height of these bars are simply based of the intensity of each channel. The bars go from low frequency to high from left to right. 
-               </div>
-            
-
-               <span class="subheading">Planets and Rings (Iteration 2)</span>
-               <div class="paragraph">
-                  To make my visualizer more interesting, I decided to do a simple hierarchial animation of planets orbiting around a large sphere.  The middle sphere represents the beat detection of the song while the circling planets and their oscillating rings represent the different frequency channels.
-               </div>
-
-
-               <span class="subheading">Beat Detection</span>
-               <div class="paragraph">
-                  To add some more visual interest to my visualizer, I wanted there to be an effect when there is a heavy beat in my song.  The beats I wanted to visualize were a loud low bass thump and a crash snare sound.  
-               </div>
-
-              
-
+               <div class="paragraph">While I did learn a lot from my years at Cal Poly, I realize that there were</div>
             </div> <!-- end now -->
 
             <div class="content" id="later">
